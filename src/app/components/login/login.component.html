@@ -1,0 +1,16 @@
+<div class="loginContainer">
+  <h2>You must be logged in in order to see some awesome kitty facts!</h2>
+
+  <div class="formContainer">
+    <input type="text"
+           [(ngModel)]="login"
+           (ngModelChange)="clearError()"
+           placeholder="Login..." />
+    <input type="password"
+           [(ngModel)]="password"
+           (ngModelChange)="clearError()"
+           placeholder="Password..." />
+    <button type="submit" (click)="onLogin()">Login</button>
+    <div class="errorMessage">{{errorMessage}}</div>
+  </div>
+</div>

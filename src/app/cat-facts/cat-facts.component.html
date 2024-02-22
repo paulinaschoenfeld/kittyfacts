@@ -1,0 +1,13 @@
+<div class="factsContainer"
+     appInfiniteScroll
+     [triggerDistance]="20"
+     (nearBottom)="scrolled()"
+>
+  <div class="catCard" *ngFor="let catFact of catFacts">
+    <div>{{catFact.fact}}</div>
+    <div class="imageContainer">
+      <img class="catImage" ngSrc="{{catFact.image}}" fill priority />
+    </div>
+  </div>
+  <app-loader *ngIf="loading"></app-loader>
+</div>
